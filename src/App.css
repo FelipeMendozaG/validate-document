@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* styles.css (archivo CSS global) */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .body-wrapper {
   position: relative
 }
@@ -134,6 +140,9 @@ ul {
   -o-object-fit: cover;
   object-fit: cover
 }
+.app-container {
+  display: flex;
+}
 
 .card-title {
   font-size: 18px
@@ -150,4 +159,7 @@ ul {
 .card-hover {
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in
+}
+.app-container {
+  display: flex;
 }
