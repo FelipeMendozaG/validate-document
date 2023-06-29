@@ -1,3 +1,3 @@
 export default {
-    "apiurl":"http://localhost:5000/api"
+    "apiurl":"https://api-validate-document.fly.dev/api"
 }

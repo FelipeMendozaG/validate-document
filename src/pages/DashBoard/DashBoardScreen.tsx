@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import '../css/style.css'
 import CardProcess from "../../component/CardProcess/CardProcess";
+import constans from "../../env/constans";
+import {StateError,StateSuccess,StatePending} from '../../store/state_process/action';
 const DashBoardScreen = ()=>{
-    const [dataRes,SetDataRes] = useState(null);
+    const [dataRes,SetDataRes] = useState({status:null,message:null,response:[]});
     const FetchResponse = async()=>{
         try{
-            const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+            const response = await fetch(`${constans.apiurl}/process`);
             const data = await response.json();
             SetDataRes(data);
         }catch(err){
-            console.log(err);
             alert("error al conectarse al api");
         }
     }
@@ -22,7 +23,9 @@ const DashBoardScreen = ()=>{
             <h1>Inicio</h1>
             <br />
             <div>
-                <CardProcess title="Hola mundo" description="mundo" is_process={false} />
+                {
+                    dataRes.response.map( (item:any,index:number)=><CardProcess key={index} title={item.title} description="mundo" is_process={false} />)
+                }
             </div>
         </div>
     )
