@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import '../css/style.css'
 import CardProcess from "../../component/CardProcess/CardProcess";
 import constans from "../../env/constans";
-import {StateError,StateSuccess,StatePending} from '../../store/state_process/action';
 const DashBoardScreen = ()=>{
     const [dataRes,SetDataRes] = useState({status:null,message:null,response:[]});
     const FetchResponse = async()=>{
