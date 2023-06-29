@@ -23,7 +23,7 @@ const DashBoardScreen = ()=>{
             <br />
             <div>
                 {
-                    dataRes.response.map( (item:any,index:number)=><CardProcess key={index} title={item.title} description="mundo" is_process={false} />)
+                    dataRes.response.map( (item:any,index:number)=><CardProcess key={index} date={item.createdAt} title={item.title} description={item.description} is_process={item.is_finish} />)
                 }
             </div>
         </div>

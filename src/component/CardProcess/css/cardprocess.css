@@ -7,7 +7,7 @@
 
 .loader {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -27,4 +27,17 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.description{
+  font-size:1rem;
+  margin-bottom: 0.5rem;
+}
+.datetime{
+  font-weight: bold;
 }
