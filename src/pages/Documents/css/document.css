@@ -1,0 +1,106 @@
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+    color: #555;
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #f5f5f5;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.content-table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.styled-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-right: 2rem;
+}
+
+.styled-select select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f5f5f5;
+    color: #555;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.styled-select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #555 transparent transparent transparent;
+    transform: translateY(-50%);
+}
+
+.styled-select select:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos opcionales para resaltar la opción seleccionada */
+.styled-select select option[value="opcion1"] {
+    background-color: #ffd700;
+    font-weight: bold;
+}
+
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.styled-button:hover {
+    background-color: #45a049;
+}
+
+.styled-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}

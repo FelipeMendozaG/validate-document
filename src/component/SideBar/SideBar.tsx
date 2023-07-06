@@ -10,6 +10,9 @@ const Sidebar = () => {
         <li>
           <Link to="/upload">Proceso de carga</Link>
         </li>
+        <li>
+          <Link to="/documents">Documentos</Link>
+        </li>
       </ul>
     </div>
   );
