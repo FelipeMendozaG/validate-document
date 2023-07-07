@@ -29,7 +29,8 @@ const UploadScreen = ()=>{
     const ChangeFile=async(valueFile:any)=>{
         setState(1);
         let bodyContent = new FormData();
-        bodyContent.append("dataExcel", valueFile);
+        alert(valueFile);
+        bodyContent.append("dataExcel", valueFile[0]);
         let response = await fetch(`${constans.apiurl}/document/load/excel`, { 
             method: "POST",
             body: bodyContent,
@@ -39,6 +40,7 @@ const UploadScreen = ()=>{
             await response.json();
             alert('Procesado');
         }
+        response = await response.json();
         alert("ocurrio un error:" + response.status);
         alert("El error es el siguiente: "+ JSON.stringify(response))
         return ;
