@@ -31,7 +31,19 @@ const DocumentScreen = ()=>{
         }
     }
     const SaveFile = async()=>{
-
+        const url = `${constans.apiurl}/document/export`;
+        const response = await fetch(url,{headers:{},method:'post'});
+        if(response.status === 200){
+            const blob = await response.blob();
+            const file = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = file;
+            a.download = "data.xlsx";
+            a.click();
+            return ;
+        }
+        alert('No se puede guardar el archivo. Comunicate con chepita support');
+        return ;
     }
     useEffect(()=>{
         FetchProcess();

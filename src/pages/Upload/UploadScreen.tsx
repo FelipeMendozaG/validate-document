@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2';
 import {useEffect, useState} from 'react';
 import './css/upload.css';
+import constans from '../../env/constans';
   
 const UploadScreen = ()=>{
     const [state,setState] = useState<Number>(0);
@@ -25,12 +26,22 @@ const UploadScreen = ()=>{
         }
         return ;
     },[state]);
-    const ChangeFile=(valueFile:any)=>{
-        console.log(valueFile);
+    const ChangeFile=async(valueFile:any)=>{
         setState(1);
-        setTimeout(()=>{
-            setState(2);
-        },5000);
+        let bodyContent = new FormData();
+        bodyContent.append("dataExcel", valueFile);
+        let response = await fetch(`${constans.apiurl}/document/load/excel`, { 
+            method: "POST",
+            body: bodyContent,
+            headers: {}
+        });
+        if(response.status === 200){
+            await response.json();
+            alert('Procesado');
+        }
+        alert("ocurrio un error:" + response.status);
+        alert("El error es el siguiente: "+ JSON.stringify(response))
+        return ;
     }
     return (
         <div className="dashboard-wrapper">
