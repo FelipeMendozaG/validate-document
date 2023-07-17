@@ -2,6 +2,8 @@
   "name": "validate-document",
   "private": true,
   "version": "0.0.0",
+  "author":"Desarrollado por FELIPE MENDOZA CHEPITA.DEV",
+  "description":"APLICACION PARA LA VALIDACION Y EXPORTACION DE DOCUMENTOS ELECTRONICOS",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
