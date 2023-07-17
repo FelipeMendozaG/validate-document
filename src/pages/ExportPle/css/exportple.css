@@ -1,0 +1,10 @@
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+.page-header button{
+    margin-right: 1rem;
+}
+.page-header h1{
+    margin-left: 2rem;
+}

@@ -2,8 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import DashBoardScreen from './pages/DashBoard/DashBoardScreen';
 import UploadScreen from './pages/Upload/UploadScreen';
 import Sidebar from './component/SideBar/SideBar';
-import './App.css'
+import ExportPleScreen from './pages/ExportPle/ExportPleScreen';
 import DocumentScreen from './pages/Documents/DocumentScreen';
+import './App.css'
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<DashBoardScreen />} />
           <Route path="/upload" element={<UploadScreen />} />
           <Route path='/documents' element={<DocumentScreen />} />
+          <Route path='/ple' element={<ExportPleScreen />} />
           <Route path="*" element={<DashBoardScreen />} />
         </Routes>
       </div>

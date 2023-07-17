@@ -13,6 +13,9 @@ const Sidebar = () => {
         <li>
           <Link to="/documents">Documentos</Link>
         </li>
+        <li>
+          <Link to="/ple">Exportar libros electronicos</Link>
+        </li>
       </ul>
     </div>
   );

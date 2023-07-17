@@ -32,7 +32,8 @@ const DocumentScreen = ()=>{
     }
     const SaveFile = async()=>{
         const url = `${constans.apiurl}/document/export`;
-        const response = await fetch(url,{headers:{},method:'post'});
+        const searchParams = new URLSearchParams(params).toString();
+        const response = await fetch(url+`/?${searchParams}`,{headers:{'Content-Type':'application/json'},method:'post'});
         if(response.status === 200){
             const blob = await response.blob();
             const file = URL.createObjectURL(blob);
@@ -71,7 +72,7 @@ const DocumentScreen = ()=>{
             </div>
             <button className="styled-button" style={{backgroundColor:'#ffc107'}} onClick={()=>setStatusRes(true)}>Buscar</button>
             <button className="styled-button" onClick={()=>SaveFile()}>Descargar Excel</button>
-            <button className="styled-button" style={{backgroundColor:'#007bff'}}>Descargar PLE</button>
+            {/* <button className="styled-button" style={{backgroundColor:'#007bff'}}>Descargar PLE</button> */}
             <div className='content-table'>
                 <table className="styled-table">
                     <thead>
