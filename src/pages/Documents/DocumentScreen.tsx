@@ -85,7 +85,7 @@ const DocumentScreen = ()=>{
                         </tr>
                     </thead>
                     <tbody>
-                        {documents.response.map(({ruc_client,client,number_document,status_document,type_document})=> (<tr> <td>{ruc_client}</td><td>{client}</td><td>{number_document}</td><td>{type_document}</td><td>{status_document}</td> </tr>) )}
+                        {documents.response.map(({_id,ruc_client,client,number_document,status_document,type_document})=> (<tr key={_id}><td>{ruc_client}</td><td>{client}</td><td>{number_document}</td><td>{type_document}</td><td>{status_document}</td></tr>) )}
                     </tbody>
                 </table>
             </div>

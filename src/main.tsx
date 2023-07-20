@@ -1,14 +1,14 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './store'
+import { HashRouter } from 'react-router-dom';
+/* import { Provider } from 'react-redux';
+import store from './store' */
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Router>
-    <Provider store={store}>
+  <HashRouter>
+    {/* <Provider store={store}> */}
       <App />
-    </Provider>
-  </Router>
+    {/* </Provider> */}
+  </HashRouter>
 )
 
 postMessage({ payload: 'removeLoading' }, '*')
